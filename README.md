@@ -6,45 +6,44 @@ In this exercise you are asked to analyze air temperature data from Kumpula, Hel
 
 ## Completing the exercise
 
-- **Exercise 5 is due by the start of the next lesson (9:15 am, 13 October 2021)**.
 - **Remember to save and commit your changes locally, and push your changes to GitHub after each major change**!
-- **We are [working in pairs](https://geo-python-site.readthedocs.io/en/latest/lessons/L2/why-pairs.html) on this exercise**, and we will only grade the repository of the member of your pair that is responsible for this week's exercise.
+- **We are [working in pairs](https://geo-python-upd.readthedocs.io/en/latest/lessons/L2/why-pairs.html) on this exercise**, and we will only grade the repository of the member of your pair that is responsible for this week's exercise.
 
 ## Where to find help
 
-- Review the [materials for Lesson 5](https://geo-python-site.readthedocs.io/en/latest/lessons/L5/overview.html)
-- Check out the [hints for this week's exercise](https://geo-python-site.readthedocs.io/en/latest/lessons/L5/exercise-5.html#exercise-5-hints) if you're having trouble.
+- Review the [materials for Lesson 5](https://geo-python-upd.readthedocs.io/en/latest/lessons/L5/overview.html)
+- Check out the [hints for this week's exercise](https://geo-python-upd.readthedocs.io/en/latest/lessons/L5/exercise-5.html#exercise-5-hints) if you're having trouble.
 
 ## Before you start
 
 ### Clone the Exercise 5 repository
 
-Before starting to work with the problems for this week, you should start a new JupyterLab instance and clone your own Exercise 5 repository (e.g., `exercise-5-htenkanen`) in the instance using Git as we saw in [**Lesson 2**](https://geo-python-site.readthedocs.io/en/latest/lessons/L2/git-basics.html#clone-a-repository-from-github).
+Before starting to work with the problems for this week, you should start a new JupyterLab instance and clone your own Exercise 5 repository (e.g., `exercise-5-jdaled`) in the instance using Git as we saw in [**Lesson 2**](https://geo-python-site.readthedocs.io/en/latest/lessons/L2/git-basics.html#clone-a-repository-from-github).
 
 ### Input data
 
-We will use NOAA weather data obtained from [here](https://www7.ncdc.noaa.gov/CDO/cdopoemain.cmd?datasetabbv=DS3505&countryabbv=&georegionabbv=&resolution=40). The data has been stored in a CSV file (comma delimited text file) which is stored in this repository: [data/6153237444115dat.csv](data/6153237444115dat.csv).
+We will use NOAA weather data obtained from [here](https://www.ncdc.noaa.gov/cdo-web/datatools/records). The data has been stored in a CSV file (comma delimited text file) which is stored in this repository: [data/ph_temp_data.csv](data/ph_temp_data.csv).
 
-You can read the full description of the data and all the attributes from this file that is also available in this exercise repository: [data/3505doc.txt](data/3505doc.txt). 
+You can read the full description of the data and all the attributes [here](https://www.ncdc.noaa.gov/cdo-web/datasets#GHCND). 
 
 The first five rows of the data look like following:
 
 ```
-USAF,WBAN,YR--MODAHRMN,DIR,SPD,GUS,CLG,SKC,L,M,H,VSB,MW,MW,MW,MW,AW,AW,AW,AW,W,TEMP,DEWP,SLP,ALT,STP,MAX,MIN,PCP01,PCP06,PCP24,PCPXX,SD
-028450,99999,201705010000,174,10,14,***,***,*,*,*,2.2,**,**,**,**,67,**,**,**,8,31,31,1009.2,*****,984.1,***,***,*****,*****,*****,*****,35
-028450,99999,201705010020,180,10,***,4,***,*,*,*,2.9,**,**,**,**,10,**,**,**,*,30,30,******,29.74,******,***,***,*****,*****,*****,*****,**
-028450,99999,201705010050,190,10,***,4,***,*,*,*,2.1,**,**,**,**,10,**,**,**,*,30,30,******,29.74,******,***,***,*****,*****,*****,*****,**
-028450,99999,201705010100,188,12,16,***,***,*,*,*,3.2,**,**,**,**,77,**,**,**,*,31,30,1009.1,*****,984.0,***,***,*****,*****,*****,*****,35
+STATION,NAME,LATITUDE,LONGITUDE,ELEVATION,DATE,TEMP,MAX,MIN
+RPM00098646,"MACTAN CEBU INTERNATIONAL, RP",10.308,123.979,9.400,2017-01-01,79.700,86.000,***
+RPM00098646,"MACTAN CEBU INTERNATIONAL, RP",10.308,123.979,9.400,2017-01-02,79.880,85.640,***
+RPM00098646,"MACTAN CEBU INTERNATIONAL, RP",10.308,123.979,9.400,2017-01-03,82.400,88.520,76.640
+RPM00098646,"MACTAN CEBU INTERNATIONAL, RP",10.308,123.979,9.400,2017-01-04,82.040,89.240,***
 ```
 
-**NOTICE**: the data includes \* -characters that represent NoData values.
+**NOTICE**: the data includes \* that represent NoData values.
 
 The most important attributes for this exercise are:
 
- - **USAF** = the station ID number
-   - 028450 : Rovaniemi
-   - 029980 : Helsinki Kumpula
- - **YR--MODAHRMN** = Year-Month-Day-Hour-Minute in Greenwich Mean Time (GMT)
+ - **STATION** = the station ID number
+   - RPM00098646 : Cebu
+   - RP000098755 : Hinatuan
+ - **Date** = Year-MM-DD
  - **TEMP** = Temperature in Fahrenheit
  - **MAX** = Maximum temperature in Fahrenheit
  - **MIN** = Minimum temperature in Fahrenheit
