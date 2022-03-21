@@ -18,7 +18,7 @@ In this exercise you are asked to analyze air temperature data from Kumpula, Hel
 
 ### Clone the Exercise 5 repository
 
-Before starting to work with the problems for this week, you should start a new JupyterLab instance and clone your own Exercise 5 repository (e.g., `exercise-5-jdaled`) in the instance using Git as we saw in [**Lesson 2**](https://geo-python-site.readthedocs.io/en/latest/lessons/L2/git-basics.html#clone-a-repository-from-github).
+Before starting to work with the problems for this week, you should start a new JupyterLab instance and dowsnload your own Exercise 5 repository (e.g., `exercise-5-jdaled`) from the Github Classroom link, and upload the notebooks and data to the Binder instance.
 
 ### Input data
 
