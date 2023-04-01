@@ -2,7 +2,7 @@
 
 In this exercise, we will be doing data analysis using [pandas - the Python Data Analysis Library](http://pandas.pydata.org/). So far, we have only used example data stored in list variables, and this week we will be loading data files and interacting with actual data sets. 
 
-In this exercise you are asked to analyze air temperature data from Kumpula, Helsinki (in Southern Finland) and Rovaniemi (a city in northern Finland) and to explore how their summer temperatures differed in 2017.
+In this exercise you are asked to analyze air temperature data from Mactan, Cebu (in central Philippines) and Hinatuan, Surigao del Sur (in southern Philippines) and to explore how their summer temperatures differed in 2017.
 
 ## Completing the exercise
 
